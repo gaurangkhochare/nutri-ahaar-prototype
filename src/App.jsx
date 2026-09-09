@@ -13,7 +13,7 @@ import Plans from "./pages/Plans";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/nutri-ahaar-prototype">
       <CartProvider>
         <Header />
         <main className="flex-1">
