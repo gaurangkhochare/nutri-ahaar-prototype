@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Toast from "./components/Toast";
 import { CartProvider } from "./context/CartContext";
 import About from "./pages/About";
 import Cart from "./pages/Cart";
@@ -30,6 +31,7 @@ export default function App() {
           </Routes>
         </main>
         <Footer />
+        <Toast />
       </CartProvider>
     </BrowserRouter>
   );

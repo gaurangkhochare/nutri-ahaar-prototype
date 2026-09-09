@@ -1,10 +1,26 @@
 /* eslint-disable react-refresh/only-export-components */
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
+import { getMealById } from "../data/mockMeals";
+import { plans } from "../data/mockPlans";
 
 const CartContext = createContext(null);
 
+const TOAST_DURATION_MS = 2200;
+
 export function CartProvider({ children }) {
   const [items, setItems] = useState([]); // { id, qty, kind: 'meal' | 'plan' }
+  const [toast, setToast] = useState(null); // { key, message }
+  const timer = useRef(null);
+
+  const showToast = (message) => {
+    if (timer.current) clearTimeout(timer.current);
+    setToast({ key: `${Date.now()}`, message });
+    timer.current = setTimeout(() => setToast(null), TOAST_DURATION_MS);
+  };
+
+  useEffect(() => () => {
+    if (timer.current) clearTimeout(timer.current);
+  }, []);
 
   const addItem = (id, kind = "meal", qty = 1) => {
     setItems((prev) => {
@@ -14,6 +30,13 @@ export function CartProvider({ children }) {
       }
       return [...prev, { id, kind, qty }];
     });
+    if (kind === "plan") {
+      const plan = plans.find((p) => String(p.id) === String(id));
+      showToast(`🧺 Plan added — ${plan?.name || "Tiffin plan"}`);
+    } else {
+      const meal = getMealById(id);
+      showToast(`✅ Added to Cart — ${meal?.name || "Meal"}`);
+    }
   };
 
   const updateQty = (id, kind, qty) => {
@@ -39,6 +62,7 @@ export function CartProvider({ children }) {
         removeItem,
         clearCart,
         count: items.reduce((n, i) => n + i.qty, 0),
+        toast,
       }}
     >
       {children}
