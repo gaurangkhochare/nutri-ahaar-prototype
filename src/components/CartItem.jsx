@@ -1,7 +1,8 @@
-export default function CartItem({ title, subtitle, price, qty, onInc, onDec, onRemove, emoji }) {
+export default function CartItem({ title, subtitle, price, qty, onInc, onDec, onRemove, emoji, image }) {
   return (
     <div className="flex gap-3 bg-white rounded-2xl border border-terra-500/15 p-3">
-      <div className="w-16 h-16 shrink-0 rounded-xl bg-cream-100 grid place-items-center text-3xl">{emoji}</div>
+      <div className="w-16 h-16 shrink-0 rounded-xl bg-cream-100 grid place-items-center text-3xl overflow-hidden">
+        {image ? <img src={image} alt={title} loading="lazy" className="w-full h-full object-cover" /> : emoji}</div>
       <div className="flex-1 min-w-0">
         <p className="font-bold text-cocoa-900 truncate">{title}</p>
         <p className="text-xs text-cocoa-800/55 truncate">{subtitle}</p>

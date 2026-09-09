@@ -23,8 +23,12 @@ export default function MealDetail() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8 grid md:grid-cols-2 gap-6">
-      <div className="rounded-[2rem] bg-gradient-to-br from-cream-100 via-terra-100 to-turmeric-400/30 min-h-72 grid place-items-center p-10 border border-terra-500/15">
-        <span className="text-9xl">{meal.emoji}</span>
+      <div className="rounded-[2rem] bg-gradient-to-br from-cream-100 via-terra-100 to-turmeric-400/30 min-h-72 grid place-items-center overflow-hidden border border-terra-500/15">
+        {meal.image ? (
+          <img src={meal.image} alt={meal.name} className="w-full h-full max-h-96 object-cover" />
+        ) : (
+          <span className="text-9xl p-10">{meal.emoji}</span>
+        )}
       </div>
       <div>
         <Link to="/menu" className="text-sm font-bold text-terra-600">← Back to menu</Link>

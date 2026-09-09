@@ -34,6 +34,7 @@ export default function Cart() {
               price={i.price}
               qty={i.qty}
               emoji={i.emoji}
+              image={i.image}
               onInc={() => updateQty(i.id, i.kind, i.qty + 1)}
               onDec={() => updateQty(i.id, i.kind, i.qty - 1)}
               onRemove={() => removeItem(i.id, i.kind)}

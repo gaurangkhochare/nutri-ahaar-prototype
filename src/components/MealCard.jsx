@@ -5,8 +5,12 @@ export default function MealCard({ meal }) {
   const { addItem } = useCart();
   return (
     <article className="group bg-white rounded-3xl overflow-hidden border border-terra-500/15 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
-      <div className="relative h-40 bg-gradient-to-br from-cream-100 via-terra-100 to-turmeric-400/30 grid place-items-center">
-        <span className="text-6xl drop-shadow-sm">{meal.emoji}</span>
+      <div className="relative h-40 bg-gradient-to-br from-cream-100 via-terra-100 to-turmeric-400/30 grid place-items-center overflow-hidden">
+        {meal.image ? (
+          <img src={meal.image} alt={meal.name} loading="lazy" className="h-full w-full object-cover group-hover:scale-105 transition-transform" />
+        ) : (
+          <span className="text-6xl drop-shadow-sm">{meal.emoji}</span>
+        )}
         <span
           className={`absolute top-3 left-3 inline-flex items-center gap-1 text-xs font-extrabold px-2.5 py-1 rounded-full border ${
             meal.type === "veg"

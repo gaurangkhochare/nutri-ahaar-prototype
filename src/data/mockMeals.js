@@ -1,3 +1,14 @@
+import chickenImg from "../assets/chicken.webp";
+import daltadkaImg from "../assets/daltadka.webp";
+import eggcurryImg from "../assets/eggcurry.webp";
+import fishImg from "../assets/fish.webp";
+import khichdiImg from "../assets/khichdi.webp";
+import masoordalImg from "../assets/masoordal.webp";
+import paneerImg from "../assets/paneer.webp";
+import parathaImg from "../assets/paratha.webp";
+import pohaImg from "../assets/poha.webp";
+import rajmachawalImg from "../assets/rajmachawal.webp";
+
 export const meals = [
   {
     id: 1,
@@ -6,7 +17,7 @@ export const meals = [
     price: 89,
     type: "veg",
     mealTime: "lunch",
-    image: null,
+    image: daltadkaImg,
     emoji: "🍛",
     cookName: "Sunita's Kitchen",
     rating: 4.8,
@@ -19,7 +30,7 @@ export const meals = [
     price: 99,
     type: "veg",
     mealTime: "lunch",
-    image: null,
+    image: rajmachawalImg,
     emoji: "🍚",
     cookName: "Sunita's Kitchen",
     rating: 4.9,
@@ -32,7 +43,7 @@ export const meals = [
     price: 79,
     type: "veg",
     mealTime: "dinner",
-    image: null,
+    image: khichdiImg,
     emoji: "🥘",
     cookName: "Meena's Rasoi",
     rating: 4.7,
@@ -44,7 +55,7 @@ export const meals = [
     price: 69,
     type: "veg",
     mealTime: "breakfast",
-    image: null,
+    image: parathaImg,
     emoji: "🫓",
     cookName: "Meena's Rasoi",
     rating: 4.8,
@@ -57,7 +68,7 @@ export const meals = [
     price: 149,
     type: "nonveg",
     mealTime: "lunch",
-    image: null,
+    image: chickenImg,
     emoji: "🍗",
     cookName: "Fatima's Kitchen",
     rating: 4.9,
@@ -70,7 +81,7 @@ export const meals = [
     price: 109,
     type: "nonveg",
     mealTime: "dinner",
-    image: null,
+    image: eggcurryImg,
     emoji: "🍳",
     cookName: "Fatima's Kitchen",
     rating: 4.6,
@@ -82,7 +93,7 @@ export const meals = [
     price: 59,
     type: "veg",
     mealTime: "breakfast",
-    image: null,
+    image: pohaImg,
     emoji: "🥣",
     cookName: "Sunita's Kitchen",
     rating: 4.7,
@@ -94,7 +105,7 @@ export const meals = [
     price: 139,
     type: "veg",
     mealTime: "dinner",
-    image: null,
+    image: paneerImg,
     emoji: "🧀",
     cookName: "Meena's Rasoi",
     rating: 4.8,
@@ -107,7 +118,7 @@ export const meals = [
     price: 99,
     type: "veg",
     mealTime: "lunch",
-    image: null,
+    image: masoordalImg,
     emoji: "🥗",
     cookName: "Annapurna Tiffins",
     rating: 4.7,
@@ -119,7 +130,7 @@ export const meals = [
     price: 159,
     type: "nonveg",
     mealTime: "dinner",
-    image: null,
+    image: fishImg,
     emoji: "🐟",
     cookName: "Fatima's Kitchen",
     rating: 4.8,

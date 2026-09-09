@@ -8,7 +8,7 @@ export function resolveCartItems(items) {
       return { ...i, title: p?.name || "Plan", subtitle: p?.duration || "", price: p?.price || 0, emoji: p?.emoji || "🧺" };
     }
     const m = getMealById(i.id);
-    return { ...i, title: m?.name || "Meal", subtitle: m?.cookName || "", price: m?.price || 0, emoji: m?.emoji || "🍛" };
+    return { ...i, title: m?.name || "Meal", subtitle: m?.cookName || "", price: m?.price || 0, emoji: m?.emoji || "🍛", image: m?.image || null };
   });
 }
 

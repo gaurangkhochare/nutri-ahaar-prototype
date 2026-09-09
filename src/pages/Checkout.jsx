@@ -57,10 +57,17 @@ export default function Checkout() {
       </form>
       <aside className="bg-cream-100 rounded-3xl border border-terra-500/15 p-5 h-fit text-sm">
         <p className="font-bold">Order summary ({detailed.length})</p>
-        <div className="mt-2 space-y-1">
+        <div className="mt-2 space-y-2">
           {detailed.map((i) => (
-            <p key={`${i.kind}-${i.id}`} className="flex justify-between gap-2">
-              <span>{i.emoji} {i.title} × {i.qty}</span><span className="font-bold">₹{i.price * i.qty}</span>
+            <p key={`${i.kind}-${i.id}`} className="flex items-center justify-between gap-2">
+              <span className="flex items-center gap-2 min-w-0">
+                {i.image ? (
+                  <img src={i.image} alt={i.title} className="w-8 h-8 rounded-lg object-cover shrink-0" />
+                ) : (
+                  <span>{i.emoji}</span>
+                )}
+                <span className="truncate">{i.title} × {i.qty}</span>
+              </span><span className="font-bold shrink-0">₹{i.price * i.qty}</span>
             </p>
           ))}
         </div>

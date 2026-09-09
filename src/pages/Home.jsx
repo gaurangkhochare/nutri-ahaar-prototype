@@ -25,8 +25,8 @@ export default function Home() {
             <p className="mt-4 text-sm text-cocoa-800/55">⭐ 4.8 loved by 2,000+ students · Free delivery on plans</p>
           </div>
           <div className="relative">
-            <div className="bg-white rounded-[2rem] p-8 shadow-2xl border border-terra-500/15 rotate-1">
-              <div className="text-7xl text-center">🍲</div>
+            <div className="bg-white rounded-[2rem] p-5 shadow-2xl border border-terra-500/15 rotate-1">
+              <img src={meals[1].image} alt="Rajma Chawal" className="w-full h-52 object-cover rounded-3xl" />
               <p className="font-display text-center mt-3 text-xl font-bold">Today&apos;s special</p>
               <p className="text-center text-sm text-cocoa-800/60">Rajma Chawal · Sunita&apos;s Kitchen</p>
               <p className="text-center mt-2 font-extrabold text-terra-600 text-2xl">₹99 <span className="text-sm text-cocoa-800/40 line-through">₹129</span></p>
