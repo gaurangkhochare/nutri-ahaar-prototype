@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/nutri-ahaar-prototype/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Nutri Aahaar — homemade food, delivered with love. Affordable daily tiffins for students and professionals." />
     <title>Nutri Aahaar — Homemade Food, Delivered with Love</title>
@@ -12,8 +12,28 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,500;9..144,0,600;9..144,0,700;9..144,1,500&family=Nunito:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/assets/index-CvAUdEaA.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-ClH39MoA.css">
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '_' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&') 
+          }).reduce(function(r, q) {
+            var p = q.split('=');
+            r[p[0]] = p[1];
+            return r;
+          }, {});
+          if (decoded._p !== undefined) {
+            window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + (decoded._p ? '/' + decoded._p : '') +
+              (decoded._s ? '?' + decoded._s : '') +
+              l.hash
+            );
+          }
+        }
+      }(window.location));
+    </script>
+    <script type="module" crossorigin src="/nutri-ahaar-prototype/assets/index-BH5LFXUW.js"></script>
+    <link rel="stylesheet" crossorigin href="/nutri-ahaar-prototype/assets/index-ClH39MoA.css">
   </head>
   <body>
     <div id="root"></div>
