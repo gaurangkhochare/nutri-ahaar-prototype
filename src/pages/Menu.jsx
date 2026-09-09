@@ -34,7 +34,7 @@ export default function Menu() {
         <input
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="Search dal, paneer, chicken… 🔍"
+          placeholder="Search dal, paneer, chicken… ⌕"
           className="w-full rounded-full border-2 border-cream-200 px-4 py-2.5 text-sm outline-none focus:border-terra-500/60"
         />
         <div className="flex flex-wrap gap-2">

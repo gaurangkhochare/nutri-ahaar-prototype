@@ -10,7 +10,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 py-12 md:py-20 grid md:grid-cols-2 gap-8 items-center">
           <div>
             <p className="inline-block text-xs font-extrabold tracking-wide px-3 py-1 rounded-full bg-leaf-500/15 text-leaf-600 border border-leaf-500/25">
-              🪔 HOMEMADE · AFFORDABLE · DAILY
+              HOMEMADE · AFFORDABLE · DAILY
             </p>
             <h1 className="font-display mt-4 text-4xl md:text-6xl font-bold text-cocoa-900 leading-[1.05]">
               Homemade food, delivered with <span className="text-terra-500 italic">love.</span>
@@ -19,7 +19,7 @@ export default function Home() {
               Ghar-jaisa khana for hostel & office life — from ₹59. No more boring canteen food.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Button to="/menu">Browse today&apos;s menu 🍛</Button>
+              <Button to="/menu">Browse today&apos;s menu</Button>
               <Button to="/plans" variant="secondary">View tiffin plans →</Button>
             </div>
             <p className="mt-4 text-sm text-cocoa-800/55">⭐ 4.8 loved by 2,000+ students · Free delivery on plans</p>
@@ -42,7 +42,7 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-4 mt-12">
         <div className="flex items-end justify-between">
           <div>
-            <h2 className="font-display text-2xl md:text-3xl font-bold">Today&apos;s menu ✨</h2>
+            <h2 className="font-display text-2xl md:text-3xl font-bold">Today&apos;s menu</h2>
             <p className="text-sm text-cocoa-800/60">Fresh from our home cooks — limited plates daily.</p>
           </div>
           <Button to="/menu" variant="secondary" className="!px-4 !py-2">See all →</Button>
@@ -54,9 +54,9 @@ export default function Home() {
 
       <section className="max-w-6xl mx-auto px-4 mt-12 grid md:grid-cols-3 gap-4">
         {[
-          { e: "💰", t: "Student prices", d: "Full thalis from ₹59. Plans save up to 26%." },
-          { e: "👩‍🍳", t: "Real home cooks", d: "Sunita, Meena & Fatima cook in small batches." },
-          { e: "🧺", t: "Tiffin subscriptions", d: "Weekly & monthly plans. Pause on travel days." },
+          { e: "💰", t: "Student prices", d: "Full thalis from ₹59. Plans save up to 26%. Great value!" },
+          { e: "👩‍🍳", t: "Real home cooks", d: "Actual home cooks preparing meals in small batches." },
+          { e: "🧺", t: "Tiffin subscriptions", d: "Weekly & monthly flexible plans. Pause on travel days." },
         ].map((c) => (
           <div key={c.t} className="bg-white rounded-3xl border border-terra-500/15 p-5">
             <div className="text-3xl">{c.e}</div>
