@@ -103,7 +103,7 @@ Open the URL shown in the terminal (usually http://localhost:5173).
 
 ## Deployment
 
-The live demo is hosted on GitHub Pages: [Click Here](https://gaurangkhochare.github.io/nutri-ahaar-prototype).
+The live demo is hosted on GitHub Pages: [Click here](https://gaurangkhochare.github.io/nutri-ahaar-prototype) to view it.
 
 The app uses `basename="/nutri-ahaar-prototype"` in the router (`src/App.jsx`) so
 client-side routes work under that sub-path. To redeploy: `npm run deploy`.
