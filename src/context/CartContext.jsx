@@ -32,10 +32,10 @@ export function CartProvider({ children }) {
     });
     if (kind === "plan") {
       const plan = plans.find((p) => String(p.id) === String(id));
-      showToast(`🧺 Plan added — ${plan?.name || "Tiffin plan"}`);
+      showToast(`${plan?.name || "Tiffin plan"} added to Cart`);
     } else {
       const meal = getMealById(id);
-      showToast(`✅ Added to Cart — ${meal?.name || "Meal"}`);
+      showToast(`Added ${meal?.name || "Meal"} to Cart`);
     }
   };
 
