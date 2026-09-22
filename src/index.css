@@ -45,3 +45,9 @@ body {
 .font-display {
   font-family: var(--font-display);
 }
+
+.link {
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
+}
