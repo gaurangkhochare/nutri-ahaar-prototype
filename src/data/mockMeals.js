@@ -22,6 +22,7 @@ export const meals = [
     cookName: "Sunita's Kitchen",
     rating: 4.8,
     tag: "Bestseller",
+    nutrition: { calories: 520, protein: 18, carbs: 78, fat: 14 },
   },
   {
     id: 2,
@@ -35,6 +36,7 @@ export const meals = [
     cookName: "Sunita's Kitchen",
     rating: 4.9,
     tag: "Grandma's recipe",
+    nutrition: { calories: 580, protein: 20, carbs: 88, fat: 12 },
   },
   {
     id: 3,
@@ -47,6 +49,7 @@ export const meals = [
     emoji: "🥘",
     cookName: "Meena's Rasoi",
     rating: 4.7,
+    nutrition: { calories: 450, protein: 15, carbs: 68, fat: 12 },
   },
   {
     id: 4,
@@ -60,6 +63,7 @@ export const meals = [
     cookName: "Meena's Rasoi",
     rating: 4.8,
     tag: "Morning favourite",
+    nutrition: { calories: 480, protein: 12, carbs: 70, fat: 16 },
   },
   {
     id: 5,
@@ -73,6 +77,7 @@ export const meals = [
     cookName: "Fatima's Kitchen",
     rating: 4.9,
     tag: "High protein",
+    nutrition: { calories: 620, protein: 38, carbs: 55, fat: 20 },
   },
   {
     id: 6,
@@ -85,6 +90,7 @@ export const meals = [
     emoji: "🍳",
     cookName: "Fatima's Kitchen",
     rating: 4.6,
+    nutrition: { calories: 540, protein: 20, carbs: 62, fat: 22 },
   },
   {
     id: 7,
@@ -97,6 +103,7 @@ export const meals = [
     emoji: "🥣",
     cookName: "Sunita's Kitchen",
     rating: 4.7,
+    nutrition: { calories: 420, protein: 8, carbs: 72, fat: 12 },
   },
   {
     id: 8,
@@ -110,6 +117,7 @@ export const meals = [
     cookName: "Meena's Rasoi",
     rating: 4.8,
     tag: "Crowd pleaser",
+    nutrition: { calories: 640, protein: 24, carbs: 58, fat: 32 },
   },
   {
     id: 9,
@@ -122,6 +130,7 @@ export const meals = [
     emoji: "🥗",
     cookName: "Annapurna Tiffins",
     rating: 4.7,
+    nutrition: { calories: 560, protein: 22, carbs: 80, fat: 14 },
   },
   {
     id: 10,
@@ -134,6 +143,7 @@ export const meals = [
     emoji: "🐟",
     cookName: "Fatima's Kitchen",
     rating: 4.8,
+    nutrition: { calories: 590, protein: 34, carbs: 60, fat: 18 },
   },
 ];
 

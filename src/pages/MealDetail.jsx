@@ -57,6 +57,26 @@ export default function MealDetail() {
             <li>{meal.type === "veg" ? "100% vegetarian" : "Non-veg, cooked separately"} · {meal.mealTime} special</li>
           </ul>
         </div>
+        {meal.nutrition && (
+          <div className="mt-4 bg-cream-100 rounded-2xl border border-terra-500/15 p-4">
+            <p className="font-bold text-cocoa-900">📊 Nutrition <span className="font-normal text-cocoa-800/55 text-xs">(per serving)</span></p>
+            <div className="mt-2 grid grid-cols-4 gap-2 text-center">
+              {[
+                ["🔥", `${meal.nutrition.calories}`, "kcal"],
+                ["💪", `${meal.nutrition.protein}g`, "protein"],
+                ["🌾", `${meal.nutrition.carbs}g`, "carbs"],
+                ["🧈", `${meal.nutrition.fat}g`, "fat"],
+              ].map(([icon, value, label]) => (
+                <div key={label} className="bg-white rounded-xl border border-terra-500/10 py-2 px-1">
+                  <div>{icon}</div>
+                  <p className="font-extrabold text-cocoa-900 text-sm">{value}</p>
+                  <p className="text-[11px] text-cocoa-800/55">{label}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-xs text-cocoa-800/50">Approximate values, for demo.</p>
+          </div>
+        )}
       </div>
     </div>
   );

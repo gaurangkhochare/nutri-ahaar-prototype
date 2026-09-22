@@ -38,6 +38,11 @@ export default function MealCard({ meal }) {
         <p className="mt-2 text-xs font-semibold text-cocoa-800/50">
           👩‍🍳 {meal.cookName} · ⭐ {meal.rating} · {meal.mealTime}
         </p>
+        {meal.nutrition && (
+          <p className="mt-1 text-xs font-bold text-leaf-600">
+            🔥 {meal.nutrition.calories} kcal · 💪 {meal.nutrition.protein}g protein
+          </p>
+        )}
         <div className="mt-3 flex gap-2">
           <button
             onClick={() => addItem(meal.id, "meal")}
