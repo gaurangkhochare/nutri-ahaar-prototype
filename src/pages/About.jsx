@@ -1,4 +1,5 @@
 import Button from "../components/Button";
+import profileImg from "../assets/profile.webp";
 
 const stack = [
   { e: "⚛️", n: "React 19", d: "Component-based UI — menu, cart, checkout and all pages." },
@@ -34,7 +35,7 @@ export default function About() {
       <h2 className="font-display text-2xl font-bold mt-10">Developer</h2>
       <div className="mt-4 bg-cocoa-900 text-cream-50 rounded-3xl p-6 flex items-center gap-5">
         <div className="w-16 h-16 shrink-0 rounded-full bg-turmeric-400 grid place-items-center text-4xl">
-          🧑‍💻
+          <img src={profileImg} alt="Profile" />
         </div>
         <div>
           <p className="font-display text-xl font-bold">Gaurang Khochare</p>
